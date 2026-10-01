@@ -151,21 +151,21 @@ public class MyService {
 
         switch (payload.getTipoH().toUpperCase()) {
             case "INDIVIDUAL":
-                if (payload.getTotalHuespedes() > 1) { //[cite: 4]
+                if (payload.getTotalHuespedes() > 1) {
                     throw new BadRequestExeption("La habitación individual solo permite máximo 1 persona");
                 }
                 costoNoche = 700;
                 break;
 
             case "DOBLE":
-                if (payload.getTotalHuespedes() > 2) { //[cite: 4]
+                if (payload.getTotalHuespedes() > 2) {
                     throw new BadRequestExeption("La habitación doble solo permite máximo 2 personas");
                 }
                 costoNoche = 1100;
                 break;
 
             case "SUITE":
-                if (payload.getTotalHuespedes() > 4) { //[cite: 4]
+                if (payload.getTotalHuespedes() > 4) {
                     throw new BadRequestExeption("La suite solo permite máximo 4 personas");
                 }
                 costoNoche = 1800;
